@@ -129,7 +129,7 @@ jobs:
           cd dnsstamps
           nimble doc --project --outdir:htmldocs src/dnsstamps.html
           # Ignore failures for older Nim
-          cp htmldocs/dnsstamps/{the,}index.html || true
+          cp htmldocs/{the,}index.html || true
 
       - name: Publish docs
         if: >

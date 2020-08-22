@@ -9,7 +9,7 @@ A Nim implementation of [DNS server stamps](https://dnscrypt.info/stamps-specifi
 
 Currently only provides functions to create stamps.
 
-- [API reference](https://alaviss.github.io/dnsstamps)
+- [API reference](https://alaviss.github.io/dnsstamps/dnsstamps.html)
 
 ## License
 

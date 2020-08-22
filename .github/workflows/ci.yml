@@ -128,6 +128,7 @@ jobs:
         run: |
           cd dnsstamps
           nimble doc --project --outdir:htmldocs src/dnsstamps.html
+          cp htmldocs/dnsstamps/{the,}index.html
 
       - name: Publish docs
         if: >

@@ -7,29 +7,16 @@ jobs:
       fail-fast: false
       matrix:
         branch: [version-1-2, devel]
-        target:
-          - os: linux
-            cpu: amd64
-          - os: linux
-            cpu: i386
-          - os: macos
-            cpu: amd64
-          - os: windows
-            cpu: i386
-          - os: windows
-            cpu: amd64
+        target: [linux, macos, windows]
         include:
-          - target:
-              os: linux
+          - target: linux
             builder: ubuntu-18.04
             docs: 'true'
-          - target:
-              os: macos
+          - target: macos
             builder: macos-10.15
-          - target:
-              os: windows
+          - target: windows
             builder: windows-2019
-    name: '${{ matrix.target.os }}-${{ matrix.target.cpu }} (${{ matrix.branch }})'
+    name: '${{ matrix.target.os }} (${{ matrix.branch }})'
     runs-on: ${{ matrix.builder }}
     steps:
       - name: Checkout
@@ -105,7 +92,7 @@ jobs:
           esac
           [[ -z "$ncpu" || $ncpu -le 0 ]] && ncpu=1
           if [[ ! -e csources/bin/nim$ext ]]; then
-            make -C csources -j $ncpu CC=gcc ucpu='${{ matrix.target.cpu }}'
+            make -C csources -j $ncpu CC=gcc
           else
             echo 'Using prebuilt csources'
           fi

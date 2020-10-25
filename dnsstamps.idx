@@ -1,0 +1,21 @@
+protoDns	dnsstamps.html#protoDns	Protocol.protoDns	
+protoDnsCrypt	dnsstamps.html#protoDnsCrypt	Protocol.protoDnsCrypt	
+protoDnsOverHttps	dnsstamps.html#protoDnsOverHttps	Protocol.protoDnsOverHttps	
+protoDnsOverTls	dnsstamps.html#protoDnsOverTls	Protocol.protoDnsOverTls	
+protoDnsCryptRelay	dnsstamps.html#protoDnsCryptRelay	Protocol.protoDnsCryptRelay	
+Protocol	dnsstamps.html#Protocol	dnsstamps: Protocol	
+propDnssec	dnsstamps.html#propDnssec	Properties.propDnssec	
+propNoLog	dnsstamps.html#propNoLog	Properties.propNoLog	
+propNoFilter	dnsstamps.html#propNoFilter	Properties.propNoFilter	
+Properties	dnsstamps.html#Properties	dnsstamps: Properties	
+Stamp	dnsstamps.html#Stamp	dnsstamps: Stamp	
+toInt	dnsstamps.html#toInt,Protocol	dnsstamps: toInt(protocol: Protocol): int	
+intToProtocol	dnsstamps.html#intToProtocol,int	dnsstamps: intToProtocol(i: int): Protocol	
+isRelay	dnsstamps.html#isRelay,Protocol	dnsstamps: isRelay(protocol: Protocol): bool	
+initDnsStamp	dnsstamps.html#initDnsStamp,string,set[Properties]	dnsstamps: initDnsStamp(address: string; props: set[Properties] = {}): Stamp	
+initDnsCryptStamp	dnsstamps.html#initDnsCryptStamp,string,openArray[byte],string,set[Properties]	dnsstamps: initDnsCryptStamp(address: string; publicKey: openArray[byte];\n                  providerName: string; props: set[Properties] = {}): Stamp	
+initDoHStamp	dnsstamps.html#initDoHStamp,string,openArray[array[,byte]],string,string,openArray[string],set[Properties]	dnsstamps: initDoHStamp(address: string = &quot;&quot;; hashes: openArray[array[32, byte]];\n             hostname: string; path = &quot;/dns-query&quot;;\n             bootstrapIps: openArray[string] = []; props: set[Properties] = {}): Stamp	
+initDoTStamp	dnsstamps.html#initDoTStamp,string,openArray[array[,byte]],string,openArray[string],set[Properties]	dnsstamps: initDoTStamp(address: string; hashes: openArray[array[32, byte]];\n             hostname: string; bootstrapIps: openArray[string] = [];\n             props: set[Properties] = {}): Stamp	
+initDnsCryptRelayStamp	dnsstamps.html#initDnsCryptRelayStamp,string	dnsstamps: initDnsCryptRelayStamp(address: string): Stamp	
+addStamp	dnsstamps.html#addStamp,string,Stamp	dnsstamps: addStamp(s: var string; stamp: Stamp)	
+`$`	dnsstamps.html#$,Stamp	dnsstamps: `$`(stamp: Stamp): string	
